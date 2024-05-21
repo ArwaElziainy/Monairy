@@ -17,7 +17,11 @@
 	margin:0 0 0 15px;
 }
 .title{
-	font-size:40px;
+	font-size:25px !important;
+	font-weight:bold;
+}
+.title2{
+	font-size:16px !important;
 	font-weight:bold;
 }
 .table{

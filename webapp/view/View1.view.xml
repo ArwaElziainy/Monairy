@@ -1,5 +1,4 @@
-<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout" xmlns="sap.m"
-	controllerName="Task2.controller.View1" displayBlock="true">
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout" xmlns="sap.m" controllerName="Task2.controller.View1" displayBlock="true">
 	<App>
 		<pages>
 			<Page title="{i18n>title}">
@@ -11,7 +10,7 @@
 									<buttons>
 										<RadioButton groupName="__group0" text="Create" id="__button0"/>
 										<RadioButton groupName="__group0" text="Change" id="__button1"/>
-										<RadioButton groupName="__group0" text="Display" id="__button2" />
+										<RadioButton groupName="__group0" text="Display" id="__button2"/>
 										<RadioButton groupName="__group0" text="Confirm" id="__button3"/>
 									</buttons>
 									<layoutData>
@@ -417,6 +416,137 @@
 						<Input id="GT"/>
 					</FlexBox>
 					<!--الباقي-->
+					<!--Outputs-->
+					<FlexBox justifyContent="Center">
+						<Title class="underline title" text="Outputs"/>
+					</FlexBox>
+						<Table class="table" id="outTable" width="80%" backgroundDesign="Transparent">
+						<columns>
+							<Column  hAlign="Center">
+								<Label class="title2" text="Refrence Number" labelFor="RefNo"/>
+							</Column>
+							<Column  hAlign="Center">
+								<Text class="title2" text="ZdateSta" id="RefNo"/>
+							</Column>
+							
+						</columns>
+						<items>
+							<ColumnListItem vAlign="Middle">
+								<cells>
+									<Label text="Status"/>
+									<Text text="ZStatusSta" id="status2"/>
+								</cells>
+							</ColumnListItem>
+							<ColumnListItem vAlign="Middle">
+								<cells>
+									<Label text="عدد أمتار عداد 1"/>
+									<Text text="ZTank8Sta" id="meter1"/>
+								</cells>
+							</ColumnListItem>
+							<ColumnListItem vAlign="Middle">
+								<cells>
+									<Label text="عدد أمتار عداد 2"/>
+									<Text text="ZTank9Sta" id="meter2"/>
+								</cells>
+							</ColumnListItem>
+						
+						</items>
+					</Table>
+					<!--<List>-->
+					<!--	<CustomListItem>-->
+					<!--		<HBox alignItems="Center" justifyContent="Center" alignContent="Center">-->
+					<!--			<Text class="title2" text="Reference Number:"/>-->
+					<!--			<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom" alignContent="Center" alignItems="Center" justifyContent="Center">-->
+					<!--				<Text text="ZdateSta"/>-->
+					<!--			</VBox>-->
+					<!--		</HBox>-->
+					<!--		<HBox alignItems="Center" justifyContent="Center" alignContent="Center">-->
+					<!--			<Text class="title2" text="Status:"/>-->
+					<!--			<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom" alignContent="Center" alignItems="Center" justifyContent="Center">-->
+					<!--				<Text text="ZStatusSta"/>-->
+					<!--			</VBox>-->
+					<!--		</HBox>-->
+					<!--		<HBox alignItems="Start" justifyContent="SpaceAround" alignContent="Center">-->
+					<!--			<VBox alignContent="Center" alignItems="Center" justifyContent="Center">-->
+					<!--				<Label labelFor="meter1" class="title2 sapUiSmallMarginTopBottom" text="عدد أمتار عداد 1"/>-->
+					<!--				<Label labelFor="meter2" class="title2 sapUiSmallMarginTopBottom" text="عدد أمتار عداد 2"/>-->
+					<!--				<Label labelFor="tonG1" class="title2 sapUiSmallMarginTopBottom" text="كمية تحويل بالطن جاف عداد 1"/>-->
+					<!--				<Label labelFor="tonG2" class="title2 sapUiSmallMarginTopBottom" text="كمية تحويل بالطن جاف عداد 2"/>-->
+					<!--				<Label labelFor="tonR1" class="title2 sapUiSmallMarginTopBottom" text="كمية تحويل بالطن رطب عداد 1"/>-->
+					<!--				<Label labelFor="tonR2" class="title2 sapUiSmallMarginTopBottom" text="كمية تحويل بالطن رطب عداد 2"/>-->
+					<!--				<Label labelFor="transG" class="title2 sapUiSmallMarginTopBottom" text="إجمالى التحويل (G)"/>-->
+					<!--				<Label labelFor="transG1" class="title2 sapUiSmallMarginTopBottom" text="إجمالى التحويل للجلوكوز(G1)"/>-->
+					<!--				<Label labelFor="TJ" class="title2 sapUiSmallMarginTopBottom" text="اجمالي تانك النشا J "/>-->
+					<!--				<Label labelFor="NG" class="title2 sapUiSmallMarginTopBottom" text="إنتاج النشا الجاف(N) "/>-->
+					<!--				<Label labelFor="DR" class="title2 sapUiSmallMarginTopBottom" text="فرق التغير (R)"/>-->
+					<!--				<Label labelFor="NK" class="title2 sapUiSmallMarginTopBottom" text="نسبة الكسب"/>-->
+					<!--				<Label labelFor="NZ" class="title2 sapUiSmallMarginTopBottom" text="كمية زيت من جنين الندى NZ"/>-->
+					<!--				<Label labelFor="ZNK" class="title2 sapUiSmallMarginTopBottom" text="كمية الكسب NK "/>-->
+					<!--				<Label labelFor="NDS" class="title2 sapUiSmallMarginTopBottom" text="كمية النشا فى دقيق ذرة الندى NDS"/>-->
+					<!--				<Label labelFor="NDG" class="title2 sapUiSmallMarginTopBottom" text="كمية الجلوتين فى دقيق ذرة الندى NDG"/>-->
+					<!--				<Label labelFor="BRG" class="title2 sapUiSmallMarginTopBottom" text="البروتيلان الجاف BRG "/>-->
+					<!--				<Label labelFor="BR" class="title2 sapUiSmallMarginTopBottom" text="البروتيلان المضاف على الجلوتوفيد BR"/>-->
+					<!--				<Label labelFor="wat" class="title2 sapUiSmallMarginTopBottom" text="بومية مياة النقع بعد المعالجة"/>-->
+					<!--				<Label labelFor="wat5" class="title2 sapUiSmallMarginTopBottom" text="عدد امتار مياة النقع المضافة على الجلوتوفيد"/>-->
+					<!--				<Label labelFor="wat6" class="title2 sapUiSmallMarginTopBottom" text="كمية مياة النقع المضافة على الجلوتوفيد الجاف"/>-->
+					<!--				<Label labelFor="WG" class="title2 sapUiSmallMarginTopBottom" text="كمية مياة النقع المضافة على الجلوتوفيد الرطب WG"/>-->
+					<!--				<Label labelFor="PKR" class="title2 sapUiSmallMarginTopBottom" text="الكسب المعبأ PKr"/>-->
+					<!--				<Label labelFor="PG1" class="title2 sapUiSmallMarginTopBottom" text="جلوتوفيد معبأPG "/>-->
+					<!--				<Label labelFor="GT1" class="title2 sapUiSmallMarginTopBottom" text="جلوتين معبأ GT"/>-->
+					<!--				<Label labelFor="PZ" class="title2 sapUiSmallMarginTopBottom" text="الزيت PZ"/>-->
+					<!--				<Label labelFor="By20" class="title2 sapUiSmallMarginTopBottom" text="مياة النقع المباعة فقط"/>-->
+					<!--				<Label labelFor="By21" class="title2 sapUiSmallMarginTopBottom" text="إجمالى إنتاج حليب النشا"/>-->
+					<!--				<Label labelFor="By22" class="title2 sapUiSmallMarginTopBottom" text="كمية المادة الصلبة فى مياة النقع المباعة WW"/>-->
+					<!--				<Label labelFor="By23" class="title2 sapUiSmallMarginTopBottom" text="كمية المادة الصلبة عند 12% رطوبة WW2"/>-->
+					<!--			</VBox>-->
+					<!--			<VBox alignItems="Center" alignContent="Center" justifyContent="Center">-->
+					<!--				<Text id="meter1" class="sapUiSmallMarginTopBottom" text="ZTank8Sta" textAlign="Center"/>-->
+					<!--				<Text id="meter2" class="sapUiSmallMarginTopBottom" text="ZTank9Sta"/>-->
+					<!--				<Text id="tonG1" class="sapUiSmallMarginTopBottom" text="ZTank10Sta"/>-->
+					<!--				<Text id="tonG2" class="sapUiSmallMarginTopBottom" text="ZTank11Sta"/>-->
+					<!--				<Text id="tonR1" class="sapUiSmallMarginTopBottom" text="ZTank12Sta"/>-->
+					<!--				<Text id="tonR2" class="sapUiSmallMarginTopBottom" text="ZTank13Sta"/>-->
+					<!--				<Text id="transG" class="sapUiSmallMarginTopBottom" text="ZFru1Sta"/>-->
+					<!--				<Text id="transG1" class="sapUiSmallMarginTopBottom" text="ZFru3Sta"/>-->
+					<!--				<Text id="TJ" class="sapUiSmallMarginTopBottom" text="ZDryTotalSta"/>-->
+					<!--				<Text id="NG" class="sapUiSmallMarginTopBottom" text="ZDryPrdSta"/>-->
+					<!--				<Text id="DR" class="sapUiSmallMarginTopBottom" text="ZTankTotalSta"/>-->
+					<!--				<Text id="NK" class="sapUiSmallMarginTopBottom" text="ZOil5Sta"/>-->
+					<!--				<Text id="NZ" class="sapUiSmallMarginTopBottom" text="ZNzSta"/>-->
+					<!--				<Text id="ZNK" class="sapUiSmallMarginTopBottom" text="ZNkSta"/>-->
+					<!--				<Text id="NDS" class="sapUiSmallMarginTopBottom" text="ZNdsSta"/>-->
+					<!--				<Text id="NDG" class="sapUiSmallMarginTopBottom" text="ZNdgSta"/>-->
+					<!--				<Text id="BRG" class="sapUiSmallMarginTopBottom" text="ZBrgSta"/>-->
+					<!--				<Text id="BR" class="sapUiSmallMarginTopBottom" text="ZBrSta"/>-->
+					<!--				<Text id="wat" class="sapUiSmallMarginTopBottom" text="ZWat4Sta"/>-->
+					<!--				<Text id="wat5" class="sapUiSmallMarginTopBottom" text="ZWat5Sta"/>-->
+					<!--				<Text id="wat6" class="sapUiSmallMarginTopBottom" text="ZWat6Sta"/>-->
+					<!--				<Text id="WG" class="sapUiSmallMarginTopBottom" text="ZWgSta"/>-->
+					<!--				<Text id="PKR" class="sapUiSmallMarginTopBottom" text="ZBy16Sta"/>-->
+					<!--				<Text id="PG1" class="sapUiSmallMarginTopBottom" text="ZBy17Sta"/>-->
+					<!--				<Text id="GT1" class="sapUiSmallMarginTopBottom" text="ZBy18Sta"/>-->
+					<!--				<Text id="PZ" class="sapUiSmallMarginTopBottom" text="ZBy19Sta"/>-->
+					<!--				<Text id="By20" class="sapUiSmallMarginTopBottom" text="ZBy20Sta"/>-->
+					<!--				<Text id="By21" class="sapUiSmallMarginTopBottom" text="ZBy21Sta"/>-->
+					<!--				<Text id="By22" class="sapUiSmallMarginTopBottom" text="ZBy22Sta"/>-->
+					<!--				<Text id="By23" class="sapUiSmallMarginTopBottom" text="ZBy23Sta"/>-->
+					<!--			</VBox>-->
+					<!--		</HBox>-->
+				
+					<!--		<HBox alignItems="Center" justifyContent="Center" alignContent="Center">-->
+					<!--			<Text class="title2" text="Changed by:"/>-->
+					<!--			<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">-->
+					<!--				<Text text="ZdateStaBy"/>-->
+					<!--			</VBox>-->
+					<!--		</HBox>-->
+					<!--		<HBox alignItems="Center" justifyContent="Center" alignContent="Center">-->
+					<!--			<Text class="title2" text="Changed on:"/>-->
+					<!--			<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">-->
+					<!--				<Text text="ZdateStaOn"/>-->
+					<!--			</VBox>-->
+					<!--		</HBox>-->
+					<!--	</CustomListItem>-->
+					<!--</List>-->
 				</content>
 			</Page>
 		</pages>
