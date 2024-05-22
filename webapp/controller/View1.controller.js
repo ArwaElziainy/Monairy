@@ -25,11 +25,11 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function(Controller) {
 			var oData = this.getView().getModel("SCHeaderSet");
 			var refNo = this.getView().byId("refNo");
 			var refValue = refNo.getValue();
-			console.log(refValue)
 
 			oData.read("/SCHeaderSet(" + refValue + ")", {
 
 				success: function(oData2) {
+
 					// General Details
 					this.getView().byId("shift").setValue(oData2.Zshift);
 					this.getView().byId("date").setValue(oData2.ZdateGluFru);
@@ -86,6 +86,41 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function(Controller) {
 					this.getView().byId("PK").setValue(oData2.ZBy1Sta);
 					this.getView().byId("PG").setValue(oData2.ZBy4Sta);
 					this.getView().byId("GT").setValue(oData2.ZBy7Sta);
+					//Outputs
+					this.getView().byId("RefNo").setText(oData2.ZdateSta);
+					this.getView().byId("status2").setText(oData2.ZStatusSta);
+					this.getView().byId("meter1").setText(oData2.ZTank8Sta);
+					this.getView().byId("meter2").setText(oData2.ZTank9Sta);
+					this.getView().byId("tonD1").setText(oData2.ZTank10Sta);
+					this.getView().byId("tonD2").setText(oData2.ZTank11Sta);
+					this.getView().byId("tonR1").setText(oData2.ZTank12Sta);
+					this.getView().byId("tonR2").setText(oData2.ZTank13Sta);
+					this.getView().byId("G").setText(oData2.ZFru1Sta);
+					this.getView().byId("G1").setText(oData2.ZFru3Sta);
+					this.getView().byId("J").setText(oData2.ZDryTotalSta);
+					this.getView().byId("N").setText(oData2.ZDryPrdSta);
+					this.getView().byId("R").setText(oData2.ZTankTotalSta);
+					this.getView().byId("KR").setText(oData2.ZOil5Sta);
+					this.getView().byId("NZ").setText(oData2.ZNzSta);
+					this.getView().byId("NK").setText(oData2.ZNkSta);
+					this.getView().byId("NDS").setText(oData2.ZNdsSta);
+					this.getView().byId("NDG").setText(oData2.ZNdgSta);
+					this.getView().byId("BRG").setText(oData2.ZBrgSta);
+					this.getView().byId("BR").setText(oData2.ZBrSta);
+					this.getView().byId("YW").setText(oData2.ZWat4Sta);
+					this.getView().byId("mWatG").setText(oData2.ZWat5Sta);
+					this.getView().byId("watDG").setText(oData2.ZWat6Sta);
+					this.getView().byId("WG").setText(oData2.ZWgSta);
+					this.getView().byId("OPK").setText(oData2.ZBy16Sta);
+					this.getView().byId("OPG").setText(oData2.ZBy17Sta);
+					this.getView().byId("OGT").setText(oData2.ZBy18Sta);
+					this.getView().byId("PZ").setText(oData2.ZBy19Sta);
+					this.getView().byId("SW").setText(oData2.ZBy20Sta);
+					this.getView().byId("TM").setText(oData2.ZBy21Sta);
+					this.getView().byId("WW").setText(oData2.ZBy22Sta);
+					this.getView().byId("WW2").setText(oData2.ZBy23Sta);
+					this.getView().byId("by").setText(oData2.ZdateStaBy);
+					this.getView().byId("on").setText(oData2.ZdateStaOn);
 
 				}.bind(this),
 				error: function(oError) {}
